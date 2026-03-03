@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+coverage/
+.env
+*.local
+*-debug.log*
+*-error.log*
+.vite/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
