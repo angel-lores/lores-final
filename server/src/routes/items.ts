@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
       `SELECT id, title, type, frequency, created_at FROM items ORDER BY created_at DESC`
     );
     return res.json(
-      result.rows.map((row) => ({
+      result.rows.map((row: any) => ({
         id: row.id,
         title: row.title,
         type: row.type,
@@ -44,7 +44,7 @@ router.get("/", async (req, res) => {
   );
 
   res.json(
-    result.rows.map((row) => ({
+    result.rows.map((row: any) => ({
       id: row.id,
       title: row.title,
       type: row.type,

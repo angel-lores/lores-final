@@ -9,5 +9,6 @@
     "skipLibCheck": true,
     "outDir": "dist"
   },
-  "include": ["src", "api"]
+  "include": ["src", "api"],
+  "exclude": ["src/__tests__"]
 }
