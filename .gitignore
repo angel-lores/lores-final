@@ -11,3 +11,5 @@ coverage/
 Thumbs.db
 .vscode/
 .idea/
+client/.vercel
+server/.vercel
