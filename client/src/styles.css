@@ -1,0 +1,248 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f4f4f4;
+  background: #0c0c0d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #252525;
+  background: #111;
+}
+
+.nav a {
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.nav a.active {
+  background: #1d1d1f;
+  border: 1px solid #2d2d30;
+}
+
+.card {
+  margin-top: 16px;
+  background: #141416;
+  border: 1px solid #26262a;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.pageTitle {
+  margin: 0;
+}
+
+.sectionTitle {
+  margin-top: 24px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.rowBetween {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.wrapRow {
+  flex-wrap: wrap;
+}
+
+.topGap {
+  margin-top: 8px;
+}
+
+.resetList {
+  list-style: none;
+  padding: 0;
+}
+
+.list {
+  margin-top: 16px;
+}
+
+.listRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #26262a;
+}
+
+.itemTitle {
+  font-weight: 600;
+}
+
+.smallText {
+  font-size: 13px;
+}
+
+.muted {
+  color: #b8b8be;
+}
+
+.labelText {
+  margin-bottom: 6px;
+}
+
+.formStack {
+  display: grid;
+  gap: 12px;
+}
+
+.input,
+select,
+input[type="week"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #303038;
+  background: #0f0f12;
+  color: #f4f4f4;
+}
+
+.filterSelect {
+  width: 180px;
+}
+
+.weekInput {
+  width: auto;
+}
+
+.weekInputFull {
+  width: 100%;
+}
+
+.button,
+.buttonSecondary {
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.button {
+  background: #f4f4f4;
+  color: #111;
+  border: none;
+}
+
+.buttonSecondary {
+  background: transparent;
+  color: #f4f4f4;
+  border: 1px solid #303038;
+}
+
+.button:focus-visible,
+.buttonSecondary:focus-visible,
+.input:focus-visible,
+select:focus-visible,
+input[type="week"]:focus-visible,
+input[type="checkbox"]:focus-visible,
+a:focus-visible {
+  outline: 2px solid #78a6ff;
+  outline-offset: 2px;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.dashboardHeaderRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.weatherCardCompact {
+  min-width: 220px;
+  max-width: 280px;
+  padding: 10px 12px;
+  border: 1px solid #2f2f34;
+  border-radius: 12px;
+  background: #17171a;
+}
+
+.weatherCompactTitle {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.weatherCompactBody,
+.weatherCompactMessage {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.summaryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summaryControls {
+  width: 360px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summaryButtons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.errorText {
+  color: #ff8d8d;
+}
+
+@media (max-width: 700px) {
+  .dashboardHeaderRight {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .weatherCardCompact {
+    max-width: 100%;
+  }
+
+  .summaryControls {
+    width: 100%;
+  }
+}

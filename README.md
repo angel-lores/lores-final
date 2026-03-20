@@ -3,38 +3,58 @@
 Angel Lores  
 CS 565 Full Stack Web Development
 
-Habit + task tracker.
+HabTrack is a full-stack habit and task tracker. Users can create habits/tasks, mark them complete by date, view weekly progress, and see a small weather card on the dashboard.
 
-Monorepo:
+## Stack
 
-- apps/api: Express + TypeScript + Prisma (SQLite)
-- apps/web: React + TypeScript + Vite
+- Front end: React + TypeScript + Vite
+- Back end: Node.js + Express + TypeScript
+- Database: PostgreSQL
+- Testing: Jest + React Testing Library
+- Accessibility: @axe-core/react in development
 
-## Run locally
+## Project structure
 
-1. Install
+- `client/` → React front end
+- `server/` → Express API + database access
 
-- `npm install`
+## Local setup
 
-2. API env
+1. Install dependencies
+   - `npm install`
+2. Create env files
+   - `cp server/.env.example server/.env`
+   - `cp client/.env.example client/.env.local`
+3. Put your Postgres connection string in `server/.env`
+4. Start both apps
+   - `npm run dev`
+5. Test
+   - `npm test`
 
-- copy `apps/api/.env.example` to `apps/api/.env`
+## Local URLs
 
-3. Create DB
+- Client: http://localhost:5173
+- Server: http://localhost:3001
+- Health: http://localhost:3001/api/health
 
-- `npm -w apps/api run db:push`
+## Deployment
 
-4. Start dev servers
+This class expects a deployed site URL in the journal, so deployment is part of finishing the project.
 
-- `npm run dev`
+Use two Vercel projects from the same GitHub repo:
 
-## URLs
+- one for `server/`
+- one for `client/`
 
-- Web: http://localhost:5173
-- API health: http://localhost:3001/api/health
+Use a hosted PostgreSQL database for production. Neon or Supabase both work. Vercel's docs say Postgres is now provided through Marketplace integrations such as Neon or Supabase.
 
-## Notes
+## Outside libraries / docs used
 
-Will have to deploy this after all so going to swap for a hosted PostgreSQL DB later I think
-Add Weather API too
-Add some polish
+- Express
+- pg
+- React Router
+- Jest
+- React Testing Library
+- @axe-core/react
+- Open-Meteo API docs
+- Vercel docs

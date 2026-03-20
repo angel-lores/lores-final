@@ -1,11 +1,13 @@
 {
   "name": "habtrack",
   "private": true,
-  "workspaces": ["apps/*"],
+  "workspaces": ["client", "server"],
   "scripts": {
-    "dev": "concurrently -n API,WEB \"npm -w apps/api run dev\" \"npm -w apps/web run dev\""
+    "dev": "concurrently -n CLIENT,SERVER \"npm -w client run dev\" \"npm -w server run dev\"",
+    "test": "npm -w server test && npm -w client test",
+    "build": "npm -w server run build && npm -w client run build"
   },
   "devDependencies": {
-    "concurrently": "^9.0.1"
+    "concurrently": "^9.1.2"
   }
 }
